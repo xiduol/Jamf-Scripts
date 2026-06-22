@@ -7,7 +7,7 @@ currentUser=$(stat -f%Su /dev/console)
 userList=$( /usr/bin/dscl /Local/Default list /Users uid | /usr/bin/awk '$2 >= 503 { print $1 }' )
 
 # Specify the accounts that you want to exclude
-excludedUsers=("templejamf" "clientsvcs")
+excludedUsers=("templejamf" "clientsvcs" "UnifiedAdmin")
 
 echo "Current logged-in user: $currentUser"
 
